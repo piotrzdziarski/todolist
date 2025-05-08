@@ -13,44 +13,12 @@
 			<button class="btn btn-selected" id=todobtn>To Do</button>
 			<button class=btn id=donebtn>Done</button>
 		</div>
-		<ol id=todolist>
-			<li>
-				<div class=number>
-					1.
-				</div>
-				<div>
-					Zrobić jakieś zadanie<br>test
-				</div>
-				<button class=btn-svg>
-					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 29.756 29.756" width=30px height=30px>
-					<path fill=orange d="M29.049,5.009L28.19,4.151c-0.943-0.945-2.488-0.945-3.434,0L10.172,18.737l-5.175-5.173 c-0.943-0.944-2.489-0.944-3.432,0.001l-0.858,0.857c-0.943,0.944-0.943,2.489,0,3.433l7.744,7.752 c0.944,0.943,2.489,0.943,3.433,0L29.049,8.442C29.991,7.498,29.991,5.953,29.049,5.009z"/>
-</svg>
-				</button>
-			</li>
-		</ol>
-		<ol id=donelist class=list-selected>
-			<li>
-				<div class=number>
-					1.
-				</div>
-				<div>
-					Zrobić jakieś zadanie<br>test aoeu aoeu aoeu oae<br> oaensuh aoensu h aoeunsaohen usa
-				</div>
-				<button class=btn-svg>
-					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width=30px height=30px>
-					    <path fill=orange class="{{ $pathClass }}" d="M511.563,434.259c-1.728-142.329-124.42-258.242-277.087-263.419V95.999c0-17.645-14.342-31.999-31.974-31.999 c-7.931,0-15.591,3.042-21.524,8.562c0,0-134.828,124.829-173.609,163.755C2.623,241.109,0,248.088,0,255.994 c0,7.906,2.623,14.885,7.369,19.687c38.781,38.915,173.609,163.745,173.609,163.745c5.933,5.521,13.593,8.562,21.524,8.562 c17.631,0,31.974-14.354,31.974-31.999v-74.591c153.479,2.156,255.792,50.603,255.792,95.924c0,5.896,4.767,10.666,10.658,10.666 c0.167,0.021,0.333,0.01,0.416,0c5.891,0,10.658-4.771,10.658-10.666C512,436.259,511.854,435.228,511.563,434.259z" />
-					</svg>
-				</button>
-				<button class="btn-svg btn-x">
-					<div class="x x-1"></div>
-					<div class="x x-2"></div>
-				</button>
-			</li>
-		</ol>
+		<ol id=todolist class=list-selected></ol>
+		<ol id=donelist></ol>
 	</main>
 	<aside>
-		<form id=form>
-			<textarea rows=3 placeholder="Add a task"></textarea>
+		<form id=form action="">
+			<textarea id=task rows=5 placeholder="Write a task"></textarea>
 			<div class=flex-end>
 				<button class=btn type=submit>Add</button>
 			</div>

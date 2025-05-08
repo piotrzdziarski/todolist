@@ -17,6 +17,17 @@ h1 {
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
+	margin-bottom: 25px;
+	padding: 0 5px;
+}
+
+main {
+	width: 100%;
+}
+
+aside {
+	margin: 30px 0 0 0;
+	width: 100%;
 }
 
 .flex-centered {
@@ -31,13 +42,19 @@ button {
 button:hover {
 	background: orange;
 }
+button:focus {
+	outline: 1px solid orange;
+}
+button:focus:after {
+	opacity: 1;
+}
 .btn {
 	position: relative;
 	box-shadow: 0 5px 10px rgba(0, 0, 0, .15);
 	padding: 10px 15px;
-	border: 2px solid orange;
+	border: 3px solid orange;
 	border-radius: 4px;
-	font-size: 18px;
+	 font-size: 18px;
 	font-weight: bold;
 	color: orange;
 }
@@ -60,10 +77,19 @@ button:hover {
 	opacity: 1;
 }
 .btn-svg {
-	margin-left: 10px;
+	margin-left: auto;
 	padding: 3px 5px;
 	border: 0;
-	height: 100%;
+}
+.btn-svg:focus {
+	outline: 3px solid orange;
+}
+svg {
+	width: 30px;
+	height: 30px;
+}
+path {
+	fill: orange;
 }
 .btn-svg:hover path {
 	fill: white;
@@ -80,9 +106,16 @@ button:hover {
 	display: none;
 }
 
+p {
+	padding: 20px 0;
+}
 ol {
 	display: none;
-	padding-left: 0;
+	margin-top: 25px;
+	box-shadow: 0 5px 10px rgba(0, 0, 0, .2);
+	padding: 0;
+	background: white;
+	text-align: center;
 }
 .list-selected {
 	display: block;
@@ -90,18 +123,28 @@ ol {
 li {
 	display: flex;
 	align-items: flex-start;
-	box-shadow: 0 5px 10px rgba(0, 0, 0, .2);
-	padding: 10px;
-	background: white;
+	padding: 12px;
+	border-top: 1px solid #ddd;
+	text-align: left;
+}
+li:first-child {
+	border-top: 0;
 }
 .number {
-	margin-right: 10px;
+	margin-right: 12px;
 	font-size: 20px;
+}
+.text {
+	margin-right: 7px;
+	font-size: 16px;
+	word-break: break-word;
+	word-wrap: break-word;
 }
 
 .btn-x {
 	position: relative;
-	width: 40px;
+	margin-left: 8px;
+	min-width: 40px;
 	height: 40px;
 }
 .btn-x:hover .x {
@@ -123,31 +166,139 @@ li {
 }
 
 textarea {
-	margin-bottom: 15px;
+	margin-bottom: 25px;
 	padding: 10px;
 	border: 0px;
-	border-top: 2px white solid;
+	border-top: 3px white solid;
 	box-shadow: 0 5px 10px rgba(0, 0, 0, .2);
+	width: 100%;
 	font-family: sans;
 	font-size: 18px;
 }
 textarea:focus {
 	outline: 0;
-	border-top: 2px orange solid;
+	border-top: 3px orange solid;
 }
 
 .flex-end {
 	display: flex;
 	justify-content: flex-end;
 }
-
+@media (min-width: 576px) {
+	#container {
+		padding: 0 30px;
+	}
+	li {
+		padding: 15px;
+	}
+	.number {
+		margin-right: 15px;
+	}
+	.text {
+		margin-right: 12px;
+	}
+	textarea {
+		padding: 15px;
+	}
+}
 @media (min-width: 768px) {
 	#container {
 		flex-direction: row;
 		align-items: flex-start;
+		padding: 0 50px;
+		width: 100%;
+	}
+
+	main {
+		width: 60%;
+	}
+	
+	aside {
+		margin: 0 0 0 40px;
+		width: 40%;
+	}
+}
+
+@media (min-width: 1200px) {
+	main {
+		width: 50%;
+	}
+	
+	aside {
+		width: 35%;
+	}
+}
+
+@media (min-width: 1600px) {
+	h1 {
+		margin-top: 100px;
+		font-size: 64px;
+	}
+	
+	#container {
+		margin-bottom: 35px;	
+	}
+
+	main {
+		width: 40%;
+	}
+
+	aside {
+		margin: 0 0 0 60px;
+		width: 30%;
+	}
+
+	.btn {
+		font-size: 24px;
+		border: 3px solid orange;
+	}
+
+	#todobtn {
+		margin-right: 35px;
+	}
+	
+	p {
+		font-size: 24px;
+	}
+
+	ol {
+		margin-top: 35px;
+	}
+
+	li {
+		padding: 20px;
+	}
+
+	.number {
+		margin-right: 20px;
+		font-size: 30px;
+	}
+
+	.text {
+		margin-right: 18px;
+		font-size: 22px;
+	}
+
+	svg {
+		width: 40px;
+		height: 40px;
+	}
+
+	.btn-x {
+		margin-left: 10px;
+		min-width: 50px;
+		height: 50px;
+	}
+
+	.x {
+		top: 22px;
+		width: 40px;
+		height: 6px;
 	}
 
 	textarea {
-		margin-left: 50px;
+		margin-bottom: 30px;
+		padding: 20px;
+		font-size: 24px;
 	}
 }
